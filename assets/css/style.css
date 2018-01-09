@@ -1,0 +1,33 @@
+body {
+    max-width: 960px;
+    width: 100%;
+    margin: 25px;   
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.jumbotron {
+    background-color: #2e5cb8;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.card {
+    border-color: #2e5cb8;
+}
+
+.card-header {
+    background-color: #2e5cb8;
+    color: #fff;
+    font-weight: 700;
+    
+}
