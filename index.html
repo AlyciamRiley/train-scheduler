@@ -1,5 +1,24 @@
 <!doctype html>
 
+
+<!--/ $(document).ready(function(){
+       $("#employees").on("click", function(){
+         
+           var markup = "<tr><td>" + name + "</td><td>" + role + "</td><td>" + startDate + "</td><td>" + monthsWorked+ "</td><td>"+rate+"</td><td>"+ billed+ "</td></tr>";
+           $("table tbody").append(markup);
+       });
+
+
+ // Capture Button Click
+   $("#add-employee").on("click", function(event) {
+     event.preventDefault();
+
+     // Grabbed values from text boxes
+     name = $("#name-input").val().trim();
+     role = $("#role-input").val().trim();
+     startDate = $("#startDate-input").val().trim();
+     rate = $("#rate-input").val().trim();-->
+
 <html>
 
 <head>
@@ -11,7 +30,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-<!---Google Fonts--->
+    <!---Google Fonts--->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!----Stylesheets---->
@@ -27,55 +46,68 @@
             <h2>Follow this train schedule so you don't go off the rails!</h2>
         </div>
     </div>
-    
-<div class="card">
-  <div class="card-header">
-    Current Train Schedule
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
- schedule goes here
-    </blockquote>
-  </div>
-</div>
+
+    <div class="card">
+        <div class="card-header" id="currentSchedule">
+            Current Train Schedule
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <section id="schedule">
+                    <table id="trains">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </section>
+
+            </blockquote>
+        </div>
+    </div>
     <br><br>
-    
-    
-<div class="card">
-  <h5 class="card-header">Add a Train</h5>
-  <div class="card-body">
-  
-      
-      <form>
-  <div class="form-group">
-    <label for="inputTrainName">Train Name</label>
-    <input type="trainName" class="form-control" id="inputTrainName">
-  </div>
-          
-  <div class="form-group">
-    <label for="inputDestination">Destination</label>
-    <input type="destination" class="form-control" id="inputDestination">
-  </div>
-          
-            <div class="form-group">
-    <label for="inputFirstTrainTime">First Train Time (HH:mm - military time)</label>
-    <input type="inputFirstTrainTime" class="form-control" id="inputFirstTrainTime">
-  </div>
-          
-             <div class="form-group">
-    <label for="inputFrequency">Frequency (min)</label>
-    <input type="inputFrequency" class="form-control" id="inputFrequency">
-  </div>
-         
-         
-          
-        
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      
-      
-  </div>
-</div>
+
+
+    <div class="card">
+        <h5 class="card-header">Add a Train</h5>
+        <div class="card-body">
+
+
+            <form>
+                <div class="form-group">
+                    <label for="input-train-name">Train Name</label>
+                    <input type="text" class="form-control" id="input-train-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="input-destination">Destination</label>
+                    <input type="text" class="form-control" id="input-destination">
+                </div>
+
+                <div class="form-group">
+                    <label for="form">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="input-first-train-time">
+                </div>
+
+                <div class="form-group">
+                    <label for="frequency">Frequency (min)</label>
+                    <input type="text" class="form-control" id="input-train-frequency">
+                </div>
+
+
+
+
+                <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
 
 
     <!---JQuery Link--->
@@ -83,6 +115,9 @@
 
     <!---Javascript file--->
     <script src="assets/javascript/app.js"></script>
+    
+    <!----Firebase Link---->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 </body>
 
 </html>
