@@ -59,7 +59,7 @@ var minutesAway = 0;
       
     });
      
-    database.ref().on("value", function(snapshot) {
+    database.ref().on("child_added", function(snapshot) {
         console.log(snapshot.val());
         console.log(snapshot.val().trainName),
         console.log(snapshot.val().destination),
