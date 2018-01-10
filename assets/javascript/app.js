@@ -64,13 +64,10 @@ var minutesAway = 0;
      
     database.ref().on("child_added", function(snapshot) {
         
-        
-  /*      var trainName = (snapshot.val());
-        var destination = (snapshot.val().trainName),
-        //var firstTrainTime = (snapshot.val().firstTrainTime),
-        var trainFrequenccy = (snapshot.val().trainFrequency),
-        var minutesAway = (snapshot.val().minutesAway)
-        */
+        var trainName = snapshot.val().trainName;
+        var desitnation = snapshot.val().destination; 
+        var firstTrainTime = snapshot.val().firstTrainTime;
+        var trainFrequency = snapshot.val().trainFrequency;
         
         console.log(snapshot.val());
         console.log(snapshot.val().trainName),
