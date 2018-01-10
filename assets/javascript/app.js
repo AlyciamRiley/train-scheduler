@@ -44,13 +44,16 @@ var minutesAway = 0;
         console.log("submitbtn is working");
         
         //Code for handling push
-        database.ref().push({
+        var newTrain = {
+      
             trainName: trainName,
             destination: destination,
             firstTrainTime: firstTrainTime,
             trainFrequency: trainFrequency,
-           
-        });
+            
+            };
+          database.ref().push(newTrain);
+
         
         $("#input-train-name").val("");
         $("#input-destination").val("");
@@ -60,6 +63,15 @@ var minutesAway = 0;
     });
      
     database.ref().on("child_added", function(snapshot) {
+        
+        
+  /*      var trainName = (snapshot.val());
+        var destination = (snapshot.val().trainName),
+        //var firstTrainTime = (snapshot.val().firstTrainTime),
+        var trainFrequenccy = (snapshot.val().trainFrequency),
+        var minutesAway = (snapshot.val().minutesAway)
+        */
+        
         console.log(snapshot.val());
         console.log(snapshot.val().trainName),
         console.log(snapshot.val().destination),
