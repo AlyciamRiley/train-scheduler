@@ -18,7 +18,7 @@ var trainName = "";
 var destination = "";
 var firstTrainTime = "";
 var trainFrequency = 0;
-var minutesAway = 0;
+//fvar minutesAway = 0;
 
 
 //Capture button click
@@ -77,6 +77,10 @@ var minutesAway = 0;
         console.log(snapshot.val().minutesAway)
         
         //change the HTML to reflect
+        
+        
+        //calculate minutes away
+        var minutesAway = moment().endOf('')
         
         var markup = "<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + firstTrainTime + "</td><td>" + trainFrequency + "</td><td>" + minutesAway+ "</td></tr>";
         $("#trains").prepend(markup);
