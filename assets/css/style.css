@@ -1,36 +1,75 @@
+/*Color Palette
+============================
+Dark Slate Gray: #49554e
+Dim Gray: #616758
+Brownish: #65514c
+Teal: #155055
+Tan: #c0c1ad
+
+*/
+
+/*fonts
+===========================
+font-family: 'Kavivanar', cursive;
+font-family: 'Fascinate Inline', cursive;
+font-family: 'Limelight', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Voltaire', sans-serif;
+font-family: 'Cutive Mono', monospace;
+
+*/
+
 body {
-    max-width: 1280px;
+ max-width: 1280px;
     width: 100%;
+    background-image:url('../images/suitcases.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     margin: 25px;   
-    font-family: 'Lato', sans-serif;
+    font-family: 'Cutive Mono', monospace;
+    color: #c0c1ad;
+    opacity: .85;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 75px;
+    letter-spacing: 10px;
+    font-family: 'Voltaire', sans-serif;
+    text-shadow: 5px 5px 5px #000;
+    
     
 }
 
-h2 {
+h2 {  
     font-size: 28px;
 }
 
 .jumbotron {
-    background-color: #2e5cb8;
+    background-color: #155055;
     border-radius: 5px;
-    color: #fff;
-    text-align: center
-        ;
+    text-align: center;
+    border: 3px solid #c0c1ad;
 }
 
 .card {
     border-color: #2e5cb8;
-}
+    background-color: #c0c1ad;
+    color: #65514c;
+    border: 3px solid #c0c1ad;
+}   
 
 .card-header {
-    background-color: #2e5cb8;
-    color: #fff;
+    background-color: #65514c;
     font-weight: 700;
     
+}
+
+.card-body {
+    font-weight:700;
+    font-size: 20px;
 }
 
 table {
@@ -42,6 +81,13 @@ table {
 th {
     text-align: left;
     padding-right: 10px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 2px solid #155055;
+}
+
+#add-train {
+    background-color: #155055;
     font-size: 15px;
-    border-bottom:1px solid #20315a;
 }
