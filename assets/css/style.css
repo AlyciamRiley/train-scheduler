@@ -87,7 +87,12 @@ th {
     border-bottom: 2px solid #155055;
 }
 
-#add-train {
+.btn-primary {
     background-color: #155055;
     font-size: 15px;
 }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: #2e3b43;
+}
+
