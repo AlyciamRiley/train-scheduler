@@ -1,7 +1,7 @@
 //Define Global Variables
 $(document).ready(function () {
 
-    //Initialize Firebase
+    // Initialize Firebase
     var config = {
         apiKey: "AIzaSyBAvRao-Kh91JVY4YgdR5HckZcBqDpZ7W4",
         authDomain: "train-scheduler-3826b.firebaseapp.com",
@@ -20,19 +20,16 @@ $(document).ready(function () {
     var firstTimeConverted = 0;
     var trainFrequency = 0;
     var nextArrival = 0;
-    var minutesAway = 0;
-    
+
+
 
     //Capture button click
 
 
-    $("#trains").on("click", function () {
-
-    });
-
 
     $("#add-train").on("click", function (event) {
         event.preventDefault();
+        console.log(event);
 
         //Grab values from text boxes
 
@@ -41,7 +38,7 @@ $(document).ready(function () {
         firstTrainTime = $("#input-first-train-time").val().trim();
         trainFrequency = $("#input-train-frequency").val().trim();
 
-    
+
         //Code for handling push
         var newTrain = {
 
@@ -57,7 +54,7 @@ $(document).ready(function () {
 
         $("#input-train-name").val("");
         $("#input-destination").val("");
-        $("#firstTrainTime").val("");
+        $("#input-first-train-time").val("");
         $("#input-train-frequency").val("")
 
 
@@ -75,7 +72,7 @@ $(document).ready(function () {
             console.log(snapshot.val().destination),
             console.log(snapshot.val().firstTrainTime),
             console.log(snapshot.val().trainFrequency),
-            console.log(snapshot.val().minutesAway)
+    
 
 
         //Make sure it is displaying correctly...
@@ -84,24 +81,16 @@ $(document).ready(function () {
 
 
         var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-        console.log("What is difftime? " + diffTime);
-
         var tRemainder = diffTime % trainFrequency;
-        console.log("What is tRemainder?" + tRemainder);
-
-        minutesAway = trainFrequency - tRemainder;
-        console.log("What is minutes away?" + minutesAway);
-
+        var minutesAway = trainFrequency - tRemainder;
         var nextArrival = moment().add(minutesAway, "minutes");
-        console.log("The next train arrives at " + nextArrival);
-
         var nextArrivalFormatted = moment(nextArrival).format("hh:mm");
         console.log("The next train arrives at " + nextArrivalFormatted);
 
 
 
 
-        var markup = "<tr><td>" + trainName + "</td><td>" + destination + "</td><td>"  + trainFrequency + "</td><td>" +  nextArrivalFormatted + "</td><td>" + minutesAway + "</td></tr>";
+        var markup = "<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + trainFrequency + "</td><td>" + nextArrivalFormatted + "</td><td>" + minutesAway + "</td></tr>";
         $("#trains").prepend(markup);
 
 
