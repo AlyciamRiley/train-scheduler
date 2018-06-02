@@ -26,7 +26,7 @@ Play here: https://alyciamriley.github.io/train-scheduler/
 
 ## Future Development
 
-- Faster load time.  Currently, it seems that Gif's are slow to load.
+- Add an option to clear old train schedule. 
 
 
 ## Authors
