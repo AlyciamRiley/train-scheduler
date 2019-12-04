@@ -88,6 +88,10 @@ th {
     border-bottom: 2px solid #155055;
 }
 
+td {
+    text-align: center;
+}
+
 .btn-primary {
     background-color: #155055;
     font-size: 15px;
