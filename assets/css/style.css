@@ -24,12 +24,12 @@ font-family: 'Cutive Mono', monospace;
 }
 
 body {
-    background-image:url('../images/suitcases.jpg');
-    background-size:cover;
+    background-image: url('../images/suitcases.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    margin: 15px;   
+    margin: 15px;
     font-family: 'Cutive Mono', monospace;
     color: #c0c1ad;
     opacity: .85;
@@ -40,11 +40,11 @@ h1 {
     letter-spacing: 10px;
     font-family: 'Voltaire', sans-serif;
     text-shadow: 5px 5px 5px #000;
-    
-    
+
+
 }
 
-h2 {  
+h2 {
     font-size: 28px;
 }
 
@@ -60,23 +60,23 @@ h2 {
     background-color: #c0c1ad;
     color: #65514c;
     border: 3px solid #c0c1ad;
-}   
+}
 
 .card-header {
     background-color: #65514c;
     font-weight: 700;
-    
+
 }
 
 .card-body {
-    font-weight:700;
+    font-weight: 700;
     font-size: 20px;
 }
 
 table {
     max-width: 1230;
     width: 100%;
-  
+
 }
 
 th {
@@ -93,7 +93,11 @@ th {
     font-size: 15px;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
     background-color: #2e3b43;
 }
 
@@ -126,87 +130,109 @@ Small devices (landscape phones, 576px and up) */
 
 /* // Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+    body {
+        margin: 5px;
+    }
+
+    .app-wrapper {
+        width: 80%;
+    }
+
     h1 {
         font-size: 50px;
     }
 
     h2 {
-        font-size: 18px;
-        top: -34px;
-        left: -128px;
+        font-size: 20px;
     }
 
-    h3 {
+    th {
+        font-size: 16px;
+    }
+
+    td {
         font-size: 14px;
+        text-align: center;
     }
 
-    .title-bar {
-        height: 125px;
-        width: 100%;
+    label {
+        font-size: 16px;
     }
 
-    .title {
-        font-size: 35px;
-    }
-
-    .heart-image {
-        height: 150px;
-        width: 150px;
-    }
-
-    .scriptFont {
-        font-size: 30px;
-    }
-
-    p.description {
-        margin-bottom: 5px;
-    }
-
-    .question * {
-        font-size: 90%;
+    .form-group {
+        margin-top: 0px;
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
+    body {
+        margin: 5px;
+    }
+
+    .app-wrapper {
+        width: 80%;
+    }
 
     h1 {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     h2 {
-        font-size: 30px;
-        top: -25px;
+        font-size: 20px;
     }
 
-    h3 {
+    th {
+        font-size: 16px;
+    }
+
+    td {
         font-size: 14px;
+        text-align: center;
     }
 
-    .title-bar {
-        height: 125px;
-        width: 100%;
-    }
-
-    .heart-image {
-        height: 175px;
-        width: 175px;
+    label {
+        font-size: 16px;
     }
 
     .form-group {
-        margin-top: 40px;
+        margin-top: 0px;
     }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+
+    body {
+        margin-left: 210px;
+    }
+
+    .app-wrapper {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
 
     h2 {
-        left: -215px;
+        font-size: 20px;
     }
 
-    .title-bar {
-        width: 100%;
+    th {
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .form-group {
+        margin-top: 0px;
     }
 }
-
